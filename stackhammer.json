@@ -1,0 +1,30 @@
+{
+  "metaVersion": "1.1.6",
+  "accessKey": "cloudsmith",
+  "puppetVersion": "PUPPET_ENTERPRISE20",
+  "master": {
+    "type": "C1_MEDIUM",
+    "deployState": "RUNNING",
+    "image": "ami-1b814f72",
+    "name": "blogmaster"
+  },
+  "environments": [
+    {
+      "siteLocation": "manifests",
+      "moduleLocations": [
+        "modules"
+      ],
+      "nodes": [
+        {
+          "type": "T1_MICRO",
+          "deployState": "RUNNING",
+          "image": "ami-31814f58",
+          "role": "blogserver",
+          "name": "blognode"
+        }
+      ],
+      "name": "production"
+    }
+  ],
+  "puppetLintEnabled": false
+}
